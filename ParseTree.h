@@ -2,11 +2,15 @@
 
 #include <string>
 
-struct ParseNode {
+class ParseNode {
+public:		// this is evil
 	char value;
 	ParseNode* left;
 	ParseNode* right;
+
 	ParseNode() { left = right = nullptr; }
+	ParseNode* getLeft() { return this->left; }
+	ParseNode* getRight() { return this->right; }
 };
 
 class ParseTree

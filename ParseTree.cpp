@@ -110,10 +110,10 @@ std::string ParseTree::recInOrder(ParseNode * ptr)
 	std::string buffer = "";
 	if (ptr = nullptr)
 		return buffer;
-	if (ptr->left != nullptr)       //segmentation fault try stringstream?
+	if (ptr.getLeft != nullptr)       //segmentation fault try stringstream?
 		buffer += recInOrder(ptr->left);
 	buffer += ptr->value;
-	if (ptr->right != nullptr)
+	if (ptr.getRight != nullptr)
 		buffer += recInOrder(ptr->right);
 	return buffer;
 }
